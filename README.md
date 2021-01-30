@@ -1,6 +1,6 @@
 ##Live demo
 
-[Live demo url="https://reactjs-slots.herokuapp.com/"]
+[button url="https://reactjs-slots.herokuapp.com/"]
 
 ## Available Scripts
 

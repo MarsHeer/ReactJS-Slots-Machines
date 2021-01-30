@@ -284,9 +284,9 @@ function premio() {
             <p className="priceInd">😧 ¡So close! But no luck...</p>
             )
     } else if (price === 10) {
-    return (
-        <p className="priceInd">🥶 <span style={{color: `red`}}>Not enough funds</span> </p>
-        )
+        return (
+            <p className="priceInd">🥶 <span style={{color: `red`}}>Not enough funds</span> </p>
+            )
 }
 }
 

@@ -325,7 +325,7 @@ function numChecker(e) {
         <input value={input} type="number" onChange={(e) => numChecker(e)} className="betInput" placeholder="0€"></input>
         <button className="spinButton" onClick={() => play()}>Spin</button>
         </div>
-        <h1 className="price">{"Euros Suizos Disponibles: " + Math.round((balance * 100)) / 100 + "€"}</h1>
+        <h1 className="price">{"Available cash: " + Math.round((balance * 100)) / 100 + "€"}</h1>
         <button onClick={() => setBalance(balance + 1000)} className="buyMoreButton">Add 1000 €</button>
         </div>
         

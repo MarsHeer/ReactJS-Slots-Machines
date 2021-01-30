@@ -1,38 +1,177 @@
-.App {
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background: #072333;
+  font-family: din-2014,sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@import url("https://use.typekit.net/yjs2lsy.css");
+
+
+.fullSlot {
+  z-index: 100;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  height: calc(100% - 60px);
+  left: 0;
+  right: 0;
+  margin: auto;
+  align-items: center;
+  background-color: #1f2b5e;
+}
+
+.casinoName {
+  font-family: fino-sans,sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  font-size: 2em;
+  color: rgba(255, 255, 255, 0.781);
+  width: 100%;
+  padding: 10px 0 0 0;
+}
+
+.price {
+  font-family: hydrophilia-iced,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  background-color: rgb(10, 22, 39);
+  padding: 10px 0 10px 0;
+  margin: 10px 0 10px 0;
+  text-align: center;
+  border: solid 2px #ffd900;
+  width: 97%;
+  height: 50px;
+  overflow: hidden;
+  font-weight: 500;
+  font-size: 1.2em;
+  border-radius: 5px;
+}
+
+.priceInd {
+  margin: 0;
+  animation: premio .5s forwards linear;
+}
+
+.renewButton {
+  margin: 20px 0 0 0;
+  padding: 20px;
+  line-height: 0;
+}
+
+@keyframes premio {
+  0% {transform: translateY(100px);}
+  80% {transform: translateY(-5px);}
+  100% {transform: translateY(0);}
+}
+
+.slot {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.slotFoot {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.betInput {
+  font-family: hydrophilia-iced,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  background-size: 20px;
+  border: none;
+  border-radius: 2px;
+  font-size: 1.2em;
+  margin: 20px;
+  height: 40px;
+  width: 100%;
+  margin: 0 5px 0 0;
+  flex: 1 1 auto;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.spinButton {
+  cursor: pointer;
+  font-family: hydrophilia-iced,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 1.2em;
+  margin: 0 0 0 5px;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 40px;
+  background-color: #ffd900;
+  border: none;
+  border-radius: 2px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.buyMoreButton {
+  cursor: pointer;
+  font-family: hydrophilia-iced,sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 1em;
+  width: calc(100% - 20px);
+  height: 30px;
+  margin-bottom: 10px;
+  background-color: #ffd900;
+  border: none;
+  border-radius: 2px;; 
+}
+
+.row {
+  flex: 1 0 auto;
+  margin: 0 5px 0 5px;
+  overflow: hidden;
+  border: solid 2px #ffd9009c;
+  background: linear-gradient(0deg,  rgb(204, 203, 203)  0%, rgb(255, 255, 255)20%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 80%, rgb(204, 203, 203) 100%);
+}
+
+.ringMoving {
+  height: 200px;
+  line-height: 200px;
+  text-align: center;
+  font-size: 4em;
+  animation: goaround 0.2s linear infinite;
+}
+
+.ringEnd {
+  height: 125px;
+  line-height: 125px;
+  text-align: center;
+  font-size: 4em;
+  animation: stop .5s ease-out forwards;
+}
+
+@keyframes goaround {
+0% {transform: translateY(0);}
+100% {transform: translateY(-1000px);}
+}
+
+@keyframes stop {
+  0% {transform: translateY(0)}
+  50% {transform: translateY(-90px)}
+  75% {transform: translateY(-80px)}
+  100% {transform: translateY(-85px)}
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
